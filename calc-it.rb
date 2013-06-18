@@ -87,8 +87,7 @@ def body_mass_index(weight,height)
   weight/(height**2)
 end
 
-def calc_mortgage
- #   numbers = [principle,interest, n_payments]
+def calc_mortgage(principle,interest, n_payments)
   principle  *  ( interest*(1+interest)**n_payments ) / ( (1+interest)**n_payments - 1 )
 end
 
