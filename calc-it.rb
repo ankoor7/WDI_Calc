@@ -16,14 +16,13 @@ end
 
 def advanced_calc
   # ask the user which operation they want to perform
-  print "(p)ower, (s)quare root, (b)ody mass index, (m)ortgage, (t)rip cost by car:"
+  print "(p)ower, s(q)uare root, (b)ody mass index, (m)ortgage, (t)rip cost by car:"
   operation = gets.chomp.downcase
-puts operation
 end
 
 def get_numbers(operation)
   # ask the user for numbers to work on
-  if operation ==  "a"
+  if operation ==  "a" || "s" || "m" || "d" || "p" || "q"
     print "Give me the first number!!:"
     first_number = gets.chomp.to_f
     print "Give me the second number!!:"
