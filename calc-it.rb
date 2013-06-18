@@ -88,7 +88,7 @@ def body_mass_index(weight,height)
 end
 
 def calc_mortgage
-
+end
 
 def square(x, y)
   puts x**y
