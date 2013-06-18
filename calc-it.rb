@@ -16,27 +16,26 @@ end
 
 def advanced_calc
   # ask the user which operation they want to perform
-  print "(p)ower, (s)quare root, (b)ody mass index, (m)ortgage (t)rip cost by car"
+  print "(p)ower, (s)quare root, (b)ody mass index, (m)ortgage, (t)rip cost by car:"
   operation = gets.chomp.downcase
-
+puts operation
 end
 
-def get_numbers
+def get_numbers(operation)
   # ask the user for numbers to work on
-  case operation
-  when "a" || "s" || "m" || "d" || "p" || "q"
+  if operation ==  "a"
     print "Give me the first number!!:"
     first_number = gets.chomp.to_f
     print "Give me the second number!!:"
     second_number = gets.chomp.to_f
-    numbers = [first_number,second_number]
-  when  "b"
+   numbers = [first_number,second_number]
+  elsif operation ==  "b"
     print "Give me your height !!:"
     height = gets.chomp.to_f
     print "Give me your weight !!:"
     weight = gets.chomp.to_f
     numbers = [height,weight]
-  when "m"
+  elsif operation ==   "m"
     print "What is the principle of the loan:"
     principle = gets.chomp.to_f
     print "What is the interest rate of the loan:"
@@ -44,7 +43,7 @@ def get_numbers
     print "Over how many months should we spread the repayment period?:"
     n_payments = gets.chomp.to_f
     numbers = [principle,interest, n_payments]
-  when "t"
+  elsif operation ==   "t"
     print "How far did you travel:"
     distance = gets.chomp.to_f
     print "what is the fuel efficiency of the car, in miles per gallon:"
@@ -91,6 +90,17 @@ def calc_mortgage(principle,interest, n_payments)
   principle  *  ( interest*(1+interest)**n_payments ) / ( (1+interest)**n_payments - 1 )
 end
 
+def calc_trip_cost(distance,mpg, cost_per_gallon,speed)
+  reduction = 2 * ( speed - 60 )
+    if reduction > 0
+      adjusted_mpg = mpg - reduction
+    else
+      adjusted_mpg = mpg
+    end
+
+    puts "Your trip will take #{distance / speed} hours and cost #{cost_per_gallon * distance / adjusted_mpg}."
+end
+
 def square(x, y)
   puts x**y
   print "Press anykey to continue"
@@ -110,7 +120,7 @@ while response != 'q'
 
 
 
-numbers  = get_numbers
+numbers  = get_numbers(operation)
 
   case operation
   when "a"
