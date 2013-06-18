@@ -25,6 +25,7 @@ def get_numbers
   # ask the user for numbers to work on
   print "Give me the first number!!:"
   first_number = gets.chomp.to_f
+  unless first_number
   print "Give me the second number!!:"
   second_number = gets.chomp.to_f
   numbers = [first_number,second_number]
@@ -32,27 +33,34 @@ end
 
 def add(x, y)
  puts x + y
+ print "Press anykey to continue"
 end
 
 def subtract(x, y)
 puts x- y
+print "Press anykey to continue" 
 end
 
 def multiply(x,y)
 puts x * y
+print "Press anykey to continue"
 end
 
 def divide(x, y)
 puts x / y
+print "Press anykey to continue"
 end
 
 def sqrt(x, y)
   z = 1/y
-puts  x**z
+puts  x**z 
+print "Press anykey to continue"
+
 end
 
 def square(x, y)
   puts x**y
+  print "Press anykey to continue"
 end
 
 # run the app...
