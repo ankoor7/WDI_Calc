@@ -14,6 +14,26 @@ def basic_calc
 
 end
 
+def advanced_calc
+end
+
+def add
+end
+
+def subtract
+end
+
+def multiply
+end
+
+def divide
+end
+
+def sqrt
+end
+
+def square
+end
 
 # run the app...
 
