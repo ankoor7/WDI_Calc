@@ -29,29 +29,28 @@ def get_numbers
 end
 
 def add(x, y)
- x + y
-
+ puts x + y
 end
 
 def subtract(x, y)
-x+ y
+puts x+ y
 end
 
 def multiply(x,y)
-x * y
+puts x * y
 end
 
 def divide(x, y)
-x / y
+puts x / y
 end
 
 def sqrt(x, y)
   z = 1/y
-  x**z
+puts  x**z
 end
 
 def square(x, y)
-  x**y
+  puts x**y
 end
 
 # run the app...
@@ -69,18 +68,18 @@ while response != 'q'
 numbers  = get_numbers
 
   case operation
-  when a
-    add(number[0],numbers[1])
-  when s
-    subtract(number[0],numbers[1])
+  when "a"
+    add(numbers[0],numbers[1])
+  when "s"
+    subtract(numbers[0],numbers[1])
   when m
-    multiply(number[0],numbers[1])
+    multiply(numbers[0],numbers[1])
   when d
-    divide(number[0],numbers[1])
+    divide(numbers[0],numbers[1])
   when p
-    square(number[0],numbers[1])
+    square(numbers[0],numbers[1])
   when q
-    sqrt(number[0],numbers[1])
+    sqrt(numbers[0],numbers[1])
   end
 
   response = menu
