@@ -79,7 +79,7 @@ numbers  = get_numbers
   when "d"
     divide(numbers[0],numbers[1])
   when "p"
-    square(numbers[0],numbers[1])
+      square(numbers[0],numbers[1])
   when "q"
     sqrt(numbers[0],numbers[1])
   end
