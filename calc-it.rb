@@ -72,13 +72,13 @@ numbers  = get_numbers
     add(numbers[0],numbers[1])
   when "s"
     subtract(numbers[0],numbers[1])
-  when m
+  when "m"
     multiply(numbers[0],numbers[1])
-  when d
+  when "d"
     divide(numbers[0],numbers[1])
-  when p
+  when "p"
     square(numbers[0],numbers[1])
-  when q
+  when "q"
     sqrt(numbers[0],numbers[1])
   end
 
