@@ -16,26 +16,26 @@ end
 
 def advanced_calc
   # ask the user which operation they want to perform
-  print "(p)ower, s(q)uare root, (b)ody mass index, (m)ortgage, (t)rip cost by car:"
+  print "(p)ower, s(q)uare root, (b)ody mass index, M(o)rtgage, (t)rip cost by car:"
   operation = gets.chomp.downcase
 end
 
 def get_numbers(operation)
   # ask the user for numbers to work on
-  if operation ==  "a" || "s" || "m" || "d" || "p" || "q"
+  if operation =~ /a|s|m|d|p|q/
     print "Give me the first number!!:"
     first_number = gets.chomp.to_f
     print "Give me the second number!!:"
     second_number = gets.chomp.to_f
    numbers = [first_number,second_number]
-  elsif operation ==  "b"
+  elsif operation =~  /b/
     # Get numbers for Body Mass Index
     print "Give me your height !!:"
     height = gets.chomp.to_f
     print "Give me your weight !!:"
     weight = gets.chomp.to_f
     numbers = [height,weight]
-  elsif operation ==   "M"
+  elsif operation =~  /o/
     # Get numbers for mortgage repayments
     print "What is the principle of the loan:"
     principle = gets.chomp.to_f
@@ -44,7 +44,7 @@ def get_numbers(operation)
     print "Over how many months should we spread the repayment period?:"
     n_payments = gets.chomp.to_f
     numbers = [principle,interest, n_payments]
-  elsif operation ==   "t"
+  elsif operation =~ /t/
     # Get numbers for cost of trip
     print "How far did you travel:"
     distance = gets.chomp.to_f
@@ -85,7 +85,7 @@ print "Press anykey to continue"
 end
 
 def body_mass_index(weight,height)
-  weight/(height**2)
+  puts (height**2)/weight
 end
 
 def calc_mortgage(principle,interest, n_payments)
