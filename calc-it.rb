@@ -45,10 +45,10 @@ def get_numbers
     n_payments = gets.chomp.to_f
     numbers = [principle,interest, n_paymetns]
   when "t"
-    print "WHow far did you travel:"
+    print "How far did you travel:"
     distance = gets.chomp.to_f
     print "what is the fuel efficiency of the car, in miles per gallon:"
-    mpg = gets.chomp.to_f / 12
+    mpg = gets.chomp.to_f
     print "How much does a gallon of petrol cost?:"
     cost_per_gallon = gets.chomp.to_f
     print "How fast will you drive, in miles per hour?"
@@ -86,6 +86,8 @@ end
 def body_mass_index(weight,height)
   weight/(height**2)
 end
+
+def calc_mortgage
 
 
 def square(x, y)
