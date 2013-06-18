@@ -35,7 +35,7 @@ def get_numbers(operation)
     print "Give me your weight !!:"
     weight = gets.chomp.to_f
     numbers = [height,weight]
-  elsif operation ==   "m"
+  elsif operation ==   "M"
     # Get numbers for mortgage repayments
     print "What is the principle of the loan:"
     principle = gets.chomp.to_f
@@ -137,6 +137,12 @@ numbers  = get_numbers(operation)
       square(numbers[0],numbers[1])
   when "q"
     sqrt(numbers[0],numbers[1])
+  when "b"
+    body_mass_index(numbers[0],numbers[1])
+  when "M"
+    calc_mortgage(numbers[0],numbers[1],numbers[2])
+  when "t"
+    calc_trip_cost(numbers[0],numbers[1],numbers[2],numbers[3])
   end
   gets
   response = menu
