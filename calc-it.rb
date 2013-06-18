@@ -28,24 +28,29 @@ def get_numbers
   numbers = gets.chomp.split.map  { |s| s.to_f }
 end
 
-def add
+def add(x, y)
+ x + y
+
 end
 
-def subtract
+def subtract(x, y)
+x+ y
 end
 
 def multiply
+x * y
 end
 
-def divide
+def divide(x, y)
+x / y
 end
 
-def sqrt(x,y)
+def sqrt(x, y)
   z = 1/y
   x**z
 end
 
-def square(x,y)
+def square(x, y)
   x**y
 end
 
