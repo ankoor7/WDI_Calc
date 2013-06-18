@@ -29,12 +29,14 @@ def get_numbers(operation)
     second_number = gets.chomp.to_f
    numbers = [first_number,second_number]
   elsif operation ==  "b"
+    # Get numbers for Body Mass Index
     print "Give me your height !!:"
     height = gets.chomp.to_f
     print "Give me your weight !!:"
     weight = gets.chomp.to_f
     numbers = [height,weight]
   elsif operation ==   "m"
+    # Get numbers for mortgage repayments
     print "What is the principle of the loan:"
     principle = gets.chomp.to_f
     print "What is the interest rate of the loan:"
@@ -43,6 +45,7 @@ def get_numbers(operation)
     n_payments = gets.chomp.to_f
     numbers = [principle,interest, n_payments]
   elsif operation ==   "t"
+    # Get numbers for cost of trip
     print "How far did you travel:"
     distance = gets.chomp.to_f
     print "what is the fuel efficiency of the car, in miles per gallon:"
