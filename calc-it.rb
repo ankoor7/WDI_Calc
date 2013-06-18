@@ -15,6 +15,14 @@ def basic_calc
 end
 
 def advanced_calc
+  # ask the user which operation they want to perform
+  print "(p)ower, s(q)quare root: "
+  operation = gets.chomp.downcase
+
+end
+
+def get_numbers
+  # ask the user for numbers to work on
 end
 
 def add
@@ -29,10 +37,13 @@ end
 def divide
 end
 
-def sqrt
+def sqrt(x,y)
+  z = 1/y
+  x**z
 end
 
-def square
+def square(x,y)
+  x**y
 end
 
 # run the app...
