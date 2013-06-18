@@ -22,20 +22,20 @@ end
 
 def get_numbers(operation)
   # ask the user for numbers to work on
-  if operation ==  "a" || "s" || "m" || "d" || "p" || "q"
+  if operation =~ /a|s|m|d|p|q/
     print "Give me the first number!!:"
     first_number = gets.chomp.to_f
     print "Give me the second number!!:"
     second_number = gets.chomp.to_f
-   numbers = [first_number,second_number]
-  elsif operation ==  "b"
+   return numbers = [first_number,second_number]
+  elsif operation =~  /b/
     # Get numbers for Body Mass Index
     print "Give me your height !!:"
     height = gets.chomp.to_f
     print "Give me your weight !!:"
     weight = gets.chomp.to_f
-    numbers = [height,weight]
-  elsif operation ==   "M"
+    return numbers = [height,weight]
+  elsif operation =~  /M/
     # Get numbers for mortgage repayments
     print "What is the principle of the loan:"
     principle = gets.chomp.to_f
@@ -43,9 +43,9 @@ def get_numbers(operation)
     interest = gets.chomp.to_f / 12
     print "Over how many months should we spread the repayment period?:"
     n_payments = gets.chomp.to_f
-    numbers = [principle,interest, n_payments]
-  elsif operation ==   "t"
-    # Get numbers for cost of trip
+    return numbers = [principle,interest, n_payments]
+  elsif operation =~   /t/
+    # Get numbers or cost of trip
     print "How far did you travel:"
     distance = gets.chomp.to_f
     print "what is the fuel efficiency of the car, in miles per gallon:"
@@ -54,7 +54,7 @@ def get_numbers(operation)
     cost_per_gallon = gets.chomp.to_f
     print "How fast will you drive, in miles per hour?"
     speed = gets.chomp.to_f
-    numbers = [distance,mpg, cost_per_gallon,speed]
+    return numbers = [distance,mpg, cost_per_gallon,speed]
   end
 end
 
