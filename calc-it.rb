@@ -37,7 +37,7 @@ def subtract(x, y)
 x+ y
 end
 
-def multiply
+def multiply(x,y)
 x * y
 end
 
@@ -61,10 +61,12 @@ response = menu
 while response != 'q'
   case response
   when 'b'
-    basic_calc
+    operation = basic_calc
   when 'a'
-    advanced_calc
+    operation = advanced_calc
   end
+
+numbers  = get_numbers
 
   case operation
   when a
