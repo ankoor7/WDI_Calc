@@ -1,7 +1,6 @@
 # Function definitions first
 def menu
   # Clear the screen, and present the user with a menu
-  sleep(5)
   puts `clear`
   puts "***CalcIt***"
   print "(b)asic, (a)dvanced, or (q)uit: "
@@ -24,8 +23,11 @@ end
 
 def get_numbers
   # ask the user for numbers to work on
-  print "Give me NUMBERS!!:"
-  numbers = gets.chomp.split.map  { |s| s.to_f }
+  print "Give me the first number!!:"
+  first_number = gets.chomp.to_f
+  print "Give me the second number!!:"
+  second_number = gets.chomp.to_f
+  numbers = [first_number,second_number]
 end
 
 def add(x, y)
@@ -33,7 +35,7 @@ def add(x, y)
 end
 
 def subtract(x, y)
-puts x+ y
+puts x- y
 end
 
 def multiply(x,y)
@@ -81,6 +83,6 @@ numbers  = get_numbers
   when "q"
     sqrt(numbers[0],numbers[1])
   end
-
+  gets
   response = menu
 end
