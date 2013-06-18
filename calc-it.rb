@@ -43,7 +43,7 @@ def get_numbers
     interest = gets.chomp.to_f / 12
     print "Over how many months should we spread the repayment period?:"
     n_payments = gets.chomp.to_f
-    numbers = [principle,interest, n_paymetns]
+    numbers = [principle,interest, n_payments]
   when "t"
     print "How far did you travel:"
     distance = gets.chomp.to_f
@@ -88,6 +88,8 @@ def body_mass_index(weight,height)
 end
 
 def calc_mortgage
+ #   numbers = [principle,interest, n_payments]
+  principle  *  ( interest*(1+interest)**n_payments ) / ( (1+interest)**n_payments - 1 )
 end
 
 def square(x, y)
