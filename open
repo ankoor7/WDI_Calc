@@ -1,0 +1,96 @@
+# Function definitions first
+def menu
+  # Clear the screen, and present the user with a menu
+  puts `clear`
+  puts "***CalcIt***"
+  print "(b)asic, (a)dvanced, or (q)uit: "
+  gets.chomp.downcase
+end
+
+def basic_calc
+  # ask the user which operation they want to perform
+  print " (a)dd, (s)ubtract, (m)ultiply, (d)ivide: "
+  operation = gets.chomp.downcase
+
+  print "What is your first number?"
+  first_number = gets.chomp.to_f
+  print "What is your second number?"
+  second_number = gets.chomp.to_f
+
+
+  case operation
+
+  when "a"
+   print add(first_number, second_number)
+  when "s"
+    print subtract(first_number, second_number)
+  when "m"
+    print multiply(first_number, second_number)
+when "d"
+  print divide(first_number, second_number)
+  end
+gets
+end
+
+def advanced_calc
+  print "(p)ower, (s)quare"
+  operation = gets.chomp.downcase
+
+
+  print "what is your first_number?"
+  first_number = gets.chomp.to_f
+  print "What is your second_number"
+
+ case operation
+
+
+when "p"
+  print power(first_number, second_number)
+when "s"
+  print square(first_number, second_number)
+
+
+    end
+ gets
+end
+
+def add(x, y)
+  x + y
+
+end
+
+def subtract(x, y)
+  x - y
+
+end
+
+def multiply(x, y)
+  x * y
+
+end
+
+def divide(x, y)
+  x / y
+end
+
+def sqrt(x)
+  math.sqrt x
+end
+
+def square
+end
+
+# run the app...
+
+response = menu
+
+while response != 'q'
+  case response
+  when 'b'
+    basic_calc
+  when 'a'
+    advanced_calc
+  end
+
+  response = menu
+end

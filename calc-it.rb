@@ -1,7 +1,7 @@
 # Function definitions first
 def menu
   # Clear the screen, and present the user with a menu
-    puts `clear`
+  puts `clear`
   puts "***CalcIt***"
   print "(b)asic, (a)dvanced, or (q)uit: "
   gets.chomp.downcase
@@ -16,7 +16,7 @@ end
 
 def advanced_calc
   # ask the user which operation they want to perform
-  print "(p)ower, s(q)quare root: "
+  print "(p)ower, (s)quare root, (b)ody mass index, (m)ortgage (t)rip cost by car"
   operation = gets.chomp.downcase
 
 end
@@ -25,10 +25,11 @@ def get_numbers
   # ask the user for numbers to work on
   print "Give me the first number!!:"
   first_number = gets.chomp.to_f
-  unless first_number
   print "Give me the second number!!:"
   second_number = gets.chomp.to_f
   numbers = [first_number,second_number]
+
+
 end
 
 def add(x, y)
@@ -38,7 +39,7 @@ end
 
 def subtract(x, y)
 puts x- y
-print "Press anykey to continue" 
+print "Press anykey to continue"
 end
 
 def multiply(x,y)
@@ -53,7 +54,7 @@ end
 
 def sqrt(x, y)
   z = 1/y
-puts  x**z 
+puts  x**z
 print "Press anykey to continue"
 
 end
@@ -74,6 +75,8 @@ while response != 'q'
   when 'a'
     operation = advanced_calc
   end
+
+
 
 numbers  = get_numbers
 
