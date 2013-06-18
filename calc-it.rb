@@ -1,7 +1,7 @@
 # Function definitions first
 def menu
   # Clear the screen, and present the user with a menu
-    puts `clear`
+  puts `clear`
   puts "***CalcIt***"
   print "(b)asic, (a)dvanced, or (q)uit: "
   gets.chomp.downcase
@@ -16,7 +16,7 @@ end
 
 def advanced_calc
   # ask the user which operation they want to perform
-  print "(p)ower, s(q)quare root: "
+  print "(p)ower, (s)quare root, (b)ody mass index, (m)ortgage (t)rip cost by car"
   operation = gets.chomp.downcase
 
 end
@@ -54,6 +54,7 @@ def get_numbers
     print "How fast will you drive, in miles per hour?"
     speed = gets.chomp.to_f
     numbers = [distance,mpg, cost_per_gallon,speed]
+  end
 end
 
 def add(x, y)
@@ -103,6 +104,8 @@ while response != 'q'
   when 'a'
     operation = advanced_calc
   end
+
+
 
 numbers  = get_numbers
 
