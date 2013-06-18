@@ -27,13 +27,16 @@ def get_numbers(operation)
     first_number = gets.chomp.to_f
     print "Give me the second number!!:"
     second_number = gets.chomp.to_f
+#<<<<<<< HEAD
    numbers = [first_number,second_number]
-  elsif operation =~  /b/
+#=======
+   elsif operation =~  /b/
     # Get numbers for Body Mass Index
     print "Give me your height !!:"
     height = gets.chomp.to_f
     print "Give me your weight !!:"
     weight = gets.chomp.to_f
+#<<<<<<< HEAD
     numbers = [height,weight]
   elsif operation =~  /o/
     # Get numbers for mortgage repayments
@@ -43,7 +46,8 @@ def get_numbers(operation)
     interest = gets.chomp.to_f / 12
     print "Over how many months should we spread the repayment period?:"
     n_payments = gets.chomp.to_f
-    numbers = [principle,interest, n_payments]
+#<<<<<<< HEAD
+    numbers = [principle,interest,n_payments]
   elsif operation =~ /t/
     # Get numbers for cost of trip
     print "How far did you travel:"
@@ -54,7 +58,7 @@ def get_numbers(operation)
     cost_per_gallon = gets.chomp.to_f
     print "How fast will you drive, in miles per hour?"
     speed = gets.chomp.to_f
-    numbers = [distance,mpg, cost_per_gallon,speed]
+    return numbers = [distance,mpg, cost_per_gallon,speed]
   end
 end
 
@@ -89,7 +93,7 @@ def body_mass_index(weight,height)
 end
 
 def calc_mortgage(principle,interest, n_payments)
-  principle  *  ( interest*(1+interest)**n_payments ) / ( (1+interest)**n_payments - 1 )
+  puts "#{principle * ( interest*(1+interest)**n_payments ) / ( (1+interest)**n_payments - 1 )}"
 end
 
 def calc_trip_cost(distance,mpg, cost_per_gallon,speed)
@@ -139,7 +143,7 @@ numbers  = get_numbers(operation)
     sqrt(numbers[0],numbers[1])
   when "b"
     body_mass_index(numbers[0],numbers[1])
-  when "M"
+  when "o"
     calc_mortgage(numbers[0],numbers[1],numbers[2])
   when "t"
     calc_trip_cost(numbers[0],numbers[1],numbers[2],numbers[3])
