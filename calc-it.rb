@@ -1,7 +1,7 @@
 # Function definitions first
 def menu
   # Clear the screen, and present the user with a menu
-  puts `clear`
+    puts `clear`
   puts "***CalcIt***"
   print "(b)asic, (a)dvanced, or (q)uit: "
   gets.chomp.downcase
