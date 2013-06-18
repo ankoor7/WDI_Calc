@@ -23,12 +23,37 @@ end
 
 def get_numbers
   # ask the user for numbers to work on
-  print "Give me the first number!!:"
-  first_number = gets.chomp.to_f
-  unless first_number
-  print "Give me the second number!!:"
-  second_number = gets.chomp.to_f
-  numbers = [first_number,second_number]
+  case operation
+  when "a" || "s" || "m" || "d" || "p" || "q"
+    print "Give me the first number!!:"
+    first_number = gets.chomp.to_f
+    print "Give me the second number!!:"
+    second_number = gets.chomp.to_f
+    numbers = [first_number,second_number]
+  when  "b"
+    print "Give me your height !!:"
+    height = gets.chomp.to_f
+    print "Give me your weight !!:"
+    weight = gets.chomp.to_f
+    numbers = [height,weight]
+  when "m"
+    print "What is the principle of the loan:"
+    principle = gets.chomp.to_f
+    print "What is the interest rate of the loan:"
+    interest = gets.chomp.to_f / 12
+    print "Over how many months should we spread the repayment period?:"
+    n_payments = gets.chomp.to_f
+    numbers = [principle,interest, n_paymetns]
+  when "t"
+    print "WHow far did you travel:"
+    distance = gets.chomp.to_f
+    print "what is the fuel efficiency of the car, in miles per gallon:"
+    mpg = gets.chomp.to_f / 12
+    print "How much does a gallon of petrol cost?:"
+    cost_per_gallon = gets.chomp.to_f
+    print "How fast will you drive, in miles per hour?"
+    speed = gets.chomp.to_f
+    numbers = [distance,mpg, cost_per_gallon,speed]
 end
 
 def add(x, y)
@@ -38,7 +63,7 @@ end
 
 def subtract(x, y)
 puts x- y
-print "Press anykey to continue" 
+print "Press anykey to continue"
 end
 
 def multiply(x,y)
@@ -53,10 +78,14 @@ end
 
 def sqrt(x, y)
   z = 1/y
-puts  x**z 
+puts  x**z
 print "Press anykey to continue"
-
 end
+
+def body_mass_index(weight,height)
+  weight/(height**2)
+end
+
 
 def square(x, y)
   puts x**y
