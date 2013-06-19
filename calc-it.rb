@@ -37,7 +37,7 @@ def get_numbers(operation)
     print "Give me your weight !!:"
     weight = gets.chomp.to_f
 #<<<<<<< HEAD
-    numbers = [height,weight]
+    numbers = [weight,height]
   elsif operation =~  /o/
     # Get numbers for mortgage repayments
     print "What is the principle of the loan:"
