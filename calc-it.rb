@@ -89,7 +89,7 @@ print "Press anykey to continue"
 end
 
 def body_mass_index(weight,height)
-  puts (height**2)/weight
+  puts weight / (height**2)
 end
 
 def calc_mortgage(principle,interest, n_payments)
